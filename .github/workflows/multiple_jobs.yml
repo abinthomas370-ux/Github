@@ -17,7 +17,7 @@ jobs:
     -  name: print Hostname
        run:  hostname
     -  name: print date
-       run: date   
+       run: date 
        
   repository-details:
     name: Repository Details
