@@ -6,9 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
-   -  name: print Hello
-     run: echo "Hello"
+    steps:
+    -  name: print Hello
+       run: echo "Hello"
   
   
     
