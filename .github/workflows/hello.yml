@@ -6,11 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
     -  name: Checkout repository
-      uses: actions/checkout@v4
-      
+       uses: actions/checkout@v4
     -  name: print Hello
        run: echo "Hello"
     -  name: print current directory
