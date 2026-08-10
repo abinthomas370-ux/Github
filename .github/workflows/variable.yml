@@ -12,7 +12,7 @@ jobs:
       JOB_VARIABLE: "Iam job variable"
     steps:
       -  name: print workflow variable
-         run: echo "$WORFLOW_VARIABLE"
+         run: echo "$WORKFLOW_VARIABLE"
       -  name: print job variable
          run: echo "$JOB_VARIABLE"
          env:
