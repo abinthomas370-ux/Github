@@ -15,9 +15,9 @@ jobs:
          run: echo "$WORKFLOW_VARIABLE"
       -  name: print job variable
          run: echo "$JOB_VARIABLE"
+      -  name: print step variable    
          env:
            STEPS_VARIABLE: "Iam steps variable"
-      -  name: print step variable
          run: echo "$STEPS_VARIABLE"
       -  name: print details
          run: |
