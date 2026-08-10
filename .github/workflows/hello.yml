@@ -38,10 +38,11 @@ jobs:
     -  name: Print GITHUB_OS
        run: echo "$RUNNER_OS"
     - name: Print details
-      run: date
-           pwd
-           ls -la
-           echo "query completed"
+      run: 
+        date
+        pwd
+        ls-la
+        echo "query completed"
   
   
     
