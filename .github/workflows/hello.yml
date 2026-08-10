@@ -38,7 +38,7 @@ jobs:
     -  name: Print GITHUB_OS
        run: echo "$RUNNER_OS"
     - name: Print details
-      run: 
+      run: |
         date
         pwd
         ls-la
