@@ -37,6 +37,11 @@ jobs:
        run: echo "$GITHUB_SHA"
     -  name: Print GITHUB_OS
        run: echo "$RUNNER_OS"
+    - name: Print details
+      run: date
+           pwd
+           ls -la
+           echo "query completed"
   
   
     
