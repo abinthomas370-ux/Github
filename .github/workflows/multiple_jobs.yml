@@ -20,7 +20,8 @@ jobs:
        run: date 
        
   repository-details:
-    name: Repository Details
+    needs: system-info
+    ##name: Repository Details
     runs-on: ubuntu-latest
     steps:
       -  name: Checkout repository
