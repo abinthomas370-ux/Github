@@ -1,0 +1,48 @@
+name:  Hello Github
+on:
+  push:
+   branches:
+   - main
+jobs:
+  system-info:
+    name: System Info
+    runs-on: ubuntu-latest
+    steps:
+    -  name: print Hello
+       run: echo "Hello"
+    -  name: print current directory
+       run: pwd
+    -  name: print current user
+       run: whoami
+    -  name: print Hostname
+       run:  hostname
+    -  name: print date
+       run: date   
+       
+  repository-details:
+    name: Repository Details
+    runs-on: ubuntu-latest
+    steps:
+      -  name: Checkout repository
+         uses: actions/checkout@v4
+      -  name: print system information
+         run: uname -a
+      -  name: List
+         run: ls
+      -  name: List files
+         run: ls -la
+      -  name: show repository structure
+         run: find .
+      - name: Print GITHUB_WORKFLOW
+        run: echo "$GITHUB_WORKFLOW"
+      - name: Print GITHUB_REPOSITORY
+        run: echo "$GITHUB_REPOSITORY"
+      - name: Print GITHUB_REF
+        run: echo "$GITHUB_REF"
+      - name: Print GITHUB_SHA
+        run: echo "$GITHUB_SHA"
+      - name: Print GITHUB_OS
+        run: echo "$GITHUB_OS"  
+  
+  
+    
