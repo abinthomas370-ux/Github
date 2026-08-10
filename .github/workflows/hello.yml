@@ -27,16 +27,16 @@ jobs:
        run: ls -la
     -  name: show repository structure
        run: find .
-    - name: Print GITHUB_WORKFLOW
-      run: echo "$GITHUB_WORKFLOW"
-    - name: Print GITHUB_REPOSITORY
-      run: echo "$GITHUB_REPOSITORY"
-    - name: Print GITHUB_REF
-      run: echo "$GITHUB_REF"
-    - name: Print GITHUB_SHA
-      run: echo "$GITHUB_SHA"
-    - name: Print GITHUB_OS
-      run: echo "$GITHUB_OS"
+    -  name: Print GITHUB_WORKFLOW
+       run: echo "$GITHUB_WORKFLOW"
+    -  name: Print GITHUB_REPOSITORY
+       run: echo "$GITHUB_REPOSITORY"
+    -  name: Print GITHUB_REF
+       run: echo "$GITHUB_REF"
+    -  name: Print GITHUB_SHA
+       run: echo "$GITHUB_SHA"
+    -  name: Print GITHUB_OS
+       run: echo "$GITHUB_OS"
   
   
     
