@@ -1,0 +1,28 @@
+name: devops-company-site
+env:
+  WORKFLOW_VARIABLE: "iam workflow variable"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      JOB_VARIABLE: "Iam job variable"
+    steps:
+      -  name: print workflow variable
+         run: echo "$WORFLOW_VARIABLE"
+      -  name: print job variable
+         run: echo "$JOB_VARIABLE"
+         env:
+           STEPS_VARIABLE: "Iam steps variable"
+      -  name: print step variable
+         run:  echo "$STEPS_VARIABLE"
+      -  name: print details
+         run: |
+           echo "$WORFLOW_VARIABLE"
+           echo "$JOB_VARIABLE"
+           echo "$STEPS_VARIABLE"
+    
+      
