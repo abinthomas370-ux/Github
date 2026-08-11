@@ -1,4 +1,4 @@
-name:  Hello Github
+name: Github
 on:
   push:
    branches:
