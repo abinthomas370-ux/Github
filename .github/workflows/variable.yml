@@ -18,7 +18,7 @@ jobs:
       -  name: print step variable    
          env:
            STEPS_VARIABLE: "Iam steps variable"
-         run: echo "${{env.STEPS_VARIABLE}}"
+         run: echo $STEPS_VARIABLE
       -  name: print details
          run: |
            echo "$WORKFLOW_VARIABLE"
