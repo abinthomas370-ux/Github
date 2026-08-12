@@ -1,0 +1,37 @@
+name: CI_Main
+on:
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch: 
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+      - run: pip install -r requirements.txt
+      - run: ls
+      - run: ruff check .
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+      - run: pip install -r requirements.txt
+      - run: pytest
+
+  package:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: zip -r release.zip .
+      - uses: actions/upload-artifact@v7
+        with:
+          name: my-artifact
+          path: ./release.zip
+          
